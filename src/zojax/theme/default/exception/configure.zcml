@@ -1,0 +1,37 @@
+<configure
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:zojax="http://namespaces.zope.org/zojax">
+
+  <!--browser:page
+     for="zope.interface.common.interfaces.IException"
+     name="index.html"
+     template="systemerror.pt"
+     class="zojax.layout.pagelet.BrowserPagelet"
+     permission="zope.Public"
+     layer="zojax.theme.default.interfaces.ISkinLayer" /-->
+
+  <zojax:pagelet
+     name="index.html"
+     for="zope.security.interfaces.IUnauthorized"
+     permission="zope.Public"
+     class=".unauthorized.Unauthorized"
+     template="unauthorized.pt"
+     layer="zojax.theme.default.interfaces.ISkinLayer" />
+
+  <zojax:pagelet
+     name="index.html"
+     for="zope.exceptions.interfaces.IUserError"
+     template="user.pt"
+     class=".user.UserErrorView"
+     permission="zope.Public"
+     layer="zojax.theme.default.interfaces.ISkinLayer" />
+
+  <zojax:pagelet
+     name="index.html"
+     for="zope.publisher.interfaces.INotFound"
+     template="notfound.pt"
+     class=".notfound.NotFound"
+     permission="zope.Public"
+     layer="zojax.theme.default.interfaces.ISkinLayer" />
+
+</configure>

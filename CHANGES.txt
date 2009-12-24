@@ -1,0 +1,220 @@
+=======
+CHANGES
+=======
+
+1.5.3 (2009-11-24)
+------------------
+
+- Fixed tabs layout (to help styling)
+
+- Filter duplicated portal tabs
+
+
+1.5.2 (2009-09-07)
+------------------
+
+- Added default non empty custom.css
+
+
+1.5.1 (2009-08-21)
+------------------
+
+- Use workspaces management api
+
+- Do not use TimeKey for portal.tabs pageelement
+
+
+1.5.0 (2009-08-13)
+------------------
+
+- Use zojax.ui.simplettw instead of zojax.ui.logo
+
+- Cleanup templates
+
+
+1.4.4 (2009-06-25)
+------------------
+
+- Copyright changed to 'Zope Foundation and Contributors'
+
+
+1.4.3 (2009-05-21)
+------------------
+
+- Use zojax.seo
+
+- Use 'portlet.footer' from zojax.ui.logo
+
+
+1.4.2 (2009-05-07)
+------------------
+
+- Use zojax.ui.logo for logo/favicon
+
+- Use zojax.ui.googleanalytics
+
+
+1.4.1 (2009-05-05)
+------------------
+
+- Do not use z3c.autoinclude
+
+- Fixed portal tabs rendering
+
+
+1.4.0 (2009-03-15)
+------------------
+
+- Fixed base tag
+
+- Use skintool explicitly
+
+- Status message moved to viewspace layout
+
+- Removed unused resources and views
+
+
+1.3.7 (2009-01-20)
+------------------
+
+- Added <base/> tag to page layout
+
+
+1.3.6 (2009-01-07)
+------------------
+
+- Use new portlets api
+
+
+1.3.5 (2008-12-12)
+------------------
+
+- Fixed tests for zope trunk
+
+- Removed unused pageelement
+
+
+1.3.4 (2008-12-09)
+------------------
+
+- Update tests
+
+
+1.3.3 (2008-11-27)
+------------------
+
+- Added uid for all layouts (allow customize layouts)
+
+- Register portlets managers to ISkinLayer
+
+
+1.3.2 (2008-11-23)
+------------------
+
+- Include zojax.skintool if installed
+
+
+1.3.1 (2008-11-21)
+------------------
+
+- Merge with zojax.ui.columns
+
+- Use new zojax.skintool api
+
+
+1.3.0 (2008-11-17)
+------------------
+
+- Reorganize pageelements
+
+
+1.2.1 (2008-10-31)
+------------------
+
+- Use logo.gif or logo.jpg from site root if exist
+
+- Fixed i18n for html <title>
+
+
+1.2.0 (2008-08-13)
+------------------
+
+- Merge zojax.page
+
+- Use new pageelement api
+
+
+1.0.0 (2008-05-20)
+------------------
+
+- Move resources to zojax.ui.resources package
+
+- Move portal layout to zojax.page package
+
+
+0.99.3 (2008-05-13)
+-------------------
+
+- Renamed to zojax.ui.skin
+
+- Exception views updated
+
+
+0.99.0 (2008-04-07)
+-----------------
+
+- Make zojax.skintool optional
+
+- zojax rotterdam moved skin to seperate package
+
+- Columns skin moved to seperaet package
+
+- personalbar moved to seperate package
+
+- portalmenu moved to seperate package
+
+
+0.15.1 (2008-03-03)
+-------------------
+
+- Added personal bar viewlet manager
+
+
+0.15 (2008-02-28)
+-----------------
+
+- Use z3c.autoinclude
+
+- New colors
+
+- New zojax logo and favicon
+
+
+0.14.1 (2008-02-08)
+-------------------
+
+- Use new version of skintool
+
+
+0.14 (2008-02-06)
+-----------------
+
+- Added navigation portlet
+
+
+0.13 (2008-02-05)
+-----------------
+
+- Added `RotterdamLayout` skin as replacement for `Rotterdam` skin
+
+
+0.11 (2008-02-02)
+-----------------
+
+- Added dependencies
+
+
+0.10 (2008-02-01)
+-----------------
+
+- Initial release

@@ -1,0 +1,8 @@
+<div class="z-space-views-wrapper" tal:condition="view/workspaces">
+  <div class="z-space-views">
+    <ul>
+      <li tal:repeat="workspace view/workspaces" 
+          tal:attributes="class python:workspace['selected'] and 'selected' or None"><a tal:attributes="href workspace/url"><img tal:attributes="src workspace/icon/url" tal:condition="workspace/icon/url|nothing" /><tal:block tal:content="workspace/title" i18n:translate="" /></a></li>
+    </ul>
+  </div>
+</div>
