@@ -1,0 +1,21 @@
+<tal:block tal:content="structure pageelement:page.title" />
+<tal:block tal:content="structure pageelement:portal.favicon" />
+<meta name="generator" content="zojax - http://zojax.net" />
+
+<tal:block tal:content="structure pageelement:page.metatags" />
+
+<!-- Internet Explorer CSS Fixes -->
+<tal:iefixstart replace="structure string:&lt;!--[if lt IE 8]&gt;" />
+<style type="text/css" media="all"
+       tal:define="path context/++resource++zojaxdefault/iefixes.css"
+       tal:content="string:@import url($path);"></style>
+<tal:iefixend replace="structure string:&lt;![endif]--&gt;" />
+
+<link rel="stylesheet" type="text/css" media="all"
+      tal:attributes="href context/++resource++zojax-custom.css" />
+
+<!-- Disable IE6 image toolbar -->
+<meta http-equiv="imagetoolbar" content="no" />
+
+<tal:block tal:repeat="element view/elements"
+	   tal:content="structure element/updateAndRender" />

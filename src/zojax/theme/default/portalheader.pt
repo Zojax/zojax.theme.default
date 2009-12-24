@@ -1,0 +1,7 @@
+<div id="z-portal-header">
+  <tal:block tal:content="structure pageelement:portal.personalbar" />
+  <tal:block tal:content="structure pageelement:portal.logo" />
+  <tal:block tal:content="structure pageelement:portal.tabs" />
+  <div class="z-portal-divider"></div>
+  <tal:block tal:content="structure pageelement:portal.breadcrumbs" />
+</div>

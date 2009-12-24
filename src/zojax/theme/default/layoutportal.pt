@@ -1,0 +1,7 @@
+<div id="z-portal" tal:define="context nocall:maincontext">
+  <tal:block content="structure pageelement:portal.header" />
+
+  <tal:block content="structure view/render"></tal:block>
+
+  <tal:block content="structure pageelement:portal.footer" />
+</div>

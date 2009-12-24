@@ -1,0 +1,88 @@
+/* zrt-cssregistry: */
+
+body {
+  scrollbar-base-color: globalBackgroundColor;
+  scrollbar-highlight-color: globalBackgroundColor;
+  scrollbar-track-color: evenRowBackgroundColor;
+  scrollbar-darkshadow-color: evenRowBackgroundColor;
+  scrollbar-3dlight-color: globalBorderColor;
+  scrollbar-shadow-color: globalBorderColor;
+  scrollbar-arrow-color: globalFontColor;
+}
+
+* html input {
+  margin-bottom: 1px;
+  border: expression((this.type=='checkbox')|(this.type=='radio') ? '0' : 'this.border');
+  background: expression((this.type=='checkbox')|(this.type=='radio') ? 'none' : this.background);
+}
+
+table.listing td.top {
+  position: relative;
+  left: -1px;
+  top: -1px;
+}
+
+div#x-portal-columns div#x-column-one,
+div#x-portal-columns div#x-column-two {
+    overflow: hidden;
+}
+
+textarea {
+    width: 97%;
+}
+
+/* Fix for IE float bug */
+* html h1,
+* html h2,
+* html h3,
+* html h4,
+* html h5,
+* html h6,
+* html dd,
+* html .documentDescription,
+* html .portalMessage,
+* html .portalWarningMessage,
+* html .portalStopMessage,
+* html .listing,
+* html .documentframe {
+    height: 0.1%;
+}
+
+table.listing td {
+  padding: 0.4em 0.6em 0.4em 0.6em;
+}
+
+.infoTable td {
+  color: expression((this==this.parentNode.firstChild)?('discreetColor'):('fontColor'));
+  border-right: expression((this==this.parentNode.firstChild)?('borderWidth dashed discreetColor'):('none'));
+  border-top: expression((this.parentNode==this.parentNode.parentNode.firstChild)?('none'):('borderWidth dashed discreetColor'));
+  padding: 0.4em 0.6em 0.4em 0.6em;
+}
+
+.infoTable2 td {
+  color: expression((this==this.parentNode.firstChild)?('discreetColor'):('fontColor'));
+  background-color: expression((this==this.parentNode.firstChild)?('evenRowBackgroundColor'):('contentBackgroundColor'));
+  border-left: expression((this==this.parentNode.firstChild)?('borderWidth borderStyle globalBorderColor'):('none'));
+  border-top: expression((this.parentNode==this.parentNode.parentNode.firstChild)?('borderWidth borderStyle globalBorderColor'):('none'));
+  padding: 0.4em 0.6em 0.4em 0.6em;
+}
+
+.infoTable2 table {
+  width: 95%;
+}
+
+* html .pageTabs {
+  margin-top: 1px;
+}
+
+* html .contentViews {
+  margin-top: 1px;
+}
+
+* html .pageViews {
+  margin-top: 1px;
+}
+
+* html #x-columns-container { 
+  width: auto;
+}

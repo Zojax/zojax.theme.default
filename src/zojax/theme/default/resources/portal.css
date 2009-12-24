@@ -1,0 +1,95 @@
+/* zrt-cssregistry: */
+
+#z-portal-workspace { 
+  padding: 0 1.5em;
+}
+
+#z-space #z-portal-workspace { 
+  padding: 0;
+}
+
+
+/* portal logo */
+#z-portal-logo {
+  border: 0;
+  padding: 0.5em 0em 0.75em 1.5em;
+}
+
+/* footer */
+#z-portal-footer { 
+  text-align: center;
+  color: discreetColor;
+  font-size: 90%;
+  padding: 2em 2em 1em 2em;
+  margin-top: 3em;
+}
+
+#z-portal-footer a {
+  color: discreetColor;
+}
+
+/* portal header */
+#z-portal-header {
+  background-color: contentBackgroundColor;
+  padding-bottom: 2em;
+}
+
+#z-portal-header table { 
+  width: 100%;
+}
+
+#z-portal-header tr {
+  vertical-align: top;
+}
+
+#z-portal-header .z-portal-header-right { 
+  padding: 0.5em 1.5em 1em 1em;
+}
+
+#z-portal-header .z-portal-header-right div {
+  text-align: right;
+  padding-bottom: 1em;
+}
+
+.z-portal-divider {
+  border-top: borderWidth borderStyle globalBorderColor;
+  border-bottom: borderWidth borderStyle globalBorderColor;
+  background-color: globalBackgroundColor;
+  padding-bottom: 5px;
+  clear: both;
+}
+
+#z-portal-header .z-space-views-wrapper {
+  margin-bottom: 0;
+  border-bottom: 0px;
+}
+
+#z-portal-header .z-space-views {
+  border-bottom: 0px;
+}
+
+/* */
+.z-portal-space { 
+  padding-top: 1em;
+}
+
+/* quick search form */
+#z-portal-quicksearch {
+  float: right;
+  background-color: transparent;
+  margin-top: 0.5em;
+  padding-right: 1em;
+  text-align: right;
+  text-transform: textTransform;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+/* restructured */
+div.section h3 {
+  padding-top: 1.25em;
+}
+
+div.section h4 {
+  padding-top: 0.5em;
+}

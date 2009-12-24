@@ -1,0 +1,68 @@
+body {
+    font-family: Baskerville, Georgia, Garamond, Times, serif;
+    font-size: 11pt !important;
+}
+h1, h2, h3, h4, h5, h6 {
+    border: none;
+    font-family: Baskerville, Georgia, Garamond, Times, serif;
+}
+div, p, ul, dl, ol {
+    width: auto;
+}
+ul, ol, dl {
+    padding-right: 0.5em;	
+}
+ul { 
+    list-style-type: square;
+}
+.documentDescription {
+    font-weight: bold;
+}
+.pageDescription {
+    font-weight: normal;
+}
+pre {
+    border: 1pt dotted black;
+    white-space: pre;
+    font-size: 8pt;
+    overflow: auto;
+    padding: 1em 0;
+}
+table.listing,
+table.listing td,
+table.z-listing,
+table.z-listing td {
+    border: 1pt solid black;
+    border-collapse: collapse;
+}
+a {
+    color: Black !important;
+    padding: 0 !important;
+    text-decoration: none !important;
+}
+a:link, a:visited {
+    color: #520;
+    background: transparent;
+}
+
+/* Page break class for use when printing */
+div.pageBreak {
+    page-break-before: always;
+}
+
+/* Hide all the elements that are irrelevant for printing */
+#z-portal-header,
+#z-portal-actions,
+#z-portal-quicksearch,
+#z-portal-tabs,
+#z-portal-divider,
+#z-portal-statusmessage,
+#z-column-one,
+#z-column-two,
+.z-content-byline,
+.z-context-view,
+.z-context-views,
+.z-context-actions
+{
+    display: none;
+}

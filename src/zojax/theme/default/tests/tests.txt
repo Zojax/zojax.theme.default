@@ -1,0 +1,83 @@
+============
+default skin
+============
+
+    >>> from datetime import datetime
+    >>> from zope import component, interface, event
+    >>> from zope.testbrowser.testing import Browser
+    >>> from zope.app.testing.functional import getRootFolder
+    >>> from zope.lifecycleevent import ObjectCreatedEvent
+    >>> from zojax.skintool.interfaces import ISkinable
+    
+    >>> root = getRootFolder()
+
+    >>> admin = Browser()
+    >>> admin.handleErrors = False
+    >>> admin.addHeader("Authorization", "Basic mgr:mgrpw")
+
+Check skin in 'Portal Skin' configlet.
+
+    >>> admin.open("http://localhost/settings/")
+    >>> admin.getLink('Portal skin').click()
+    >>> admin.getControl(name="form.widgets.skin:list").value = ['zojax']
+    >>> admin.getControl('Save').click()
+
+    >>> admin.open("http://localhost/test.html")
+    >>> print admin.contents
+    <!DOCTYPE html PUBLIC...
+    ...
+    <div id="z-portal-logo">
+      <a href="http://localhost/" name="top">
+        <img alt="" src="http://localhost/@@/zojax-resources/logo" />
+      </a>
+    </div>
+    ...
+    </html>
+
+
+Poral tabs
+----------
+
+    >>> admin.open("http://localhost/context.html/content/")
+    >>> admin.getLink('Workspaces').click()
+    >>> admin.getControl(name="workspaces.widgets.workspaces:list").value = ['news', 'people']
+    >>> admin.getControl(name="content.edit.buttons.save").click()
+
+    >>> admin.open('http://localhost/')
+    >>> print admin.contents
+    <!DOCTYPE html PUBLIC...
+    ...
+    <div class="z-space-views-wrapper">
+      <div class="z-space-views">
+        <ul>
+          <li class="selected"><a href="http://localhost/news/"><img src="..." />News</a></li> <li><a href="http://localhost/people/"><img src="..." />People</a></li>
+        </ul>
+      </div>
+    </div>
+    ...
+    </html>
+    
+
+NotFound
+--------
+
+    >>> actor = Browser()
+    >>> try:
+    ...     actor.open("http://localhost/unknown")
+    ... except:
+    ...     pass
+    >>> print actor.contents
+    <!DOCTYPE html PUBLIC
+    ...
+    <h3>
+       The page that you are trying to access is not available
+    </h3>
+    <br /> 
+    <b>Please note the following:</b>
+    <br />
+    <ol>
+       <li>You might have misspelled the url</li>
+       <li>You might be trying to access a non-existing page</li>
+    </ol>
+    ...
+    </html>
