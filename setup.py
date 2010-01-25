@@ -78,6 +78,7 @@ setup(name='zojax.theme.default',
                           'zojax.ui.breadcrumbs',
                           'zojax.ui.googleanalytics',
                           'zojax.ui.simplettw',
+                          'zojax.ui.searching',
 
                           'zojax.jquery.i18n',
                           ],
