@@ -16,7 +16,7 @@
      permission="zope.Public"
      class=".unauthorized.Unauthorized"
      template="unauthorized.pt"
-     layer="zojax.theme.default.interfaces.ISkinLayer" />
+     layer="..interfaces.ICommonSkinLayer" />
 
   <zojax:pagelet
      name="index.html"
@@ -24,7 +24,7 @@
      template="user.pt"
      class=".user.UserErrorView"
      permission="zope.Public"
-     layer="zojax.theme.default.interfaces.ISkinLayer" />
+     layer="..interfaces.ICommonSkinLayer" />
 
   <zojax:pagelet
      name="index.html"
@@ -32,6 +32,6 @@
      template="notfound.pt"
      class=".notfound.NotFound"
      permission="zope.Public"
-     layer="zojax.theme.default.interfaces.ISkinLayer" />
+     layer="..interfaces.ICommonSkinLayer" />
 
 </configure>

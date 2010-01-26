@@ -21,11 +21,15 @@ from zojax.layoutform.interfaces import ILayoutFormLayer
 from zojax.ui.googleanalytics.interfaces import IGoogleAnalyticsHeaders
 
 
+class ICommonSkinLayer(ILayoutFormLayer):
+    """ common skin layer """
+
+
 class ISkinLayer(interface.Interface):
     """ zojax layer """
+    
 
-
-class ISkin(ISkinLayer, ILayoutFormLayer):
+class ISkin(ISkinLayer, ICommonSkinLayer):
     """ zojax Skin """
 
 

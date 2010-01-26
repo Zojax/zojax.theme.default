@@ -1,7 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns:tal="http://xml.zope.org/namespaces/tal"
-      tal:define="language request/locale/getLocaleID; dummy resourcepackage:zojaxdefault">
-  <head tal:attributes="url layout/url; base layout/base_url; portal layout/portal_url">
+      tal:define="language request/locale/getLocaleID; dummy resourcepackage:common">
+  <head tal:attributes="url layout/url; base layout/base_url; portal layout/portal_url"
+        tal:define="dummy resourcepackage:theme">
     <base tal:attributes="href request/URL" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 

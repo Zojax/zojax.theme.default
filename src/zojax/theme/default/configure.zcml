@@ -27,7 +27,8 @@
      for="zope.app.component.interfaces.ISite"
      description="Page layout. It contains html headers, html body, etc."
      template="layoutpage.pt"
-     class=".layoutpage.LayoutPage" />
+     class=".layoutpage.LayoutPage"
+     layer=".interfaces.ICommonSkinLayer" />
 
   <!-- portal layout -->
   <zojax:layout
@@ -38,7 +39,7 @@
      for="zope.app.component.interfaces.ISite"
      description="Portal layout for 'zojax'"
      template="layoutportal.pt"
-     layer=".interfaces.ISkinLayer" />
+     layer=".interfaces.ICommonSkinLayer" />
 
   <!-- viewspace layout -->
   <zojax:layout
@@ -49,14 +50,14 @@
      description="Viewpsace layout."
      for="zope.app.component.interfaces.ISite"
      template="layoutviewspace.pt" 
-     layer=".interfaces.ISkinLayer" />
+     layer=".interfaces.ICommonSkinLayer" />
 
   <!-- html header elements -->
   <zojax:pageelement
      name="page.headers"
      provides=".interfaces.IPageHeaders"
      template="pageheaders.pt"
-     layer=".interfaces.ISkinLayer"
+     layer=".interfaces.ICommonSkinLayer"
      class=".pageheaders.PageHeaders" />
 
   <!-- portal elements -->
@@ -64,14 +65,14 @@
      name="portal.header"
      provides=".interfaces.IPortalHeader"
      template="portalheader.pt" 
-     layer=".interfaces.ISkinLayer" />
+     layer=".interfaces.ICommonSkinLayer" />
 
   <!-- elements -->
   <zojax:pageelement
      name="portal.tabs"
      template="portaltabs.pt"
      class=".portaltabs.PortalTabs"
-     layer=".interfaces.ISkinLayer" />
+     layer=".interfaces.ICommonSkinLayer" />
 
   <!-- root space layout -->
   <zojax:layout
@@ -79,52 +80,62 @@
      layout="portal"
      for="zojax.content.space.interfaces.IRootSpace"
      template="spacelayout.pt"
-     layer=".interfaces.ISkinLayer" />
-
+     layer=".interfaces.ICommonSkinLayer" />
+   
   <!-- default logo -->
-  <zojax:resource
-     name="sitelogo.gif"
-     file="resources/logo.gif"
-     layer=".interfaces.ISkinLayer" />
+  <zojax:ttwresource
+     title="Header: Logo - Data"
+     name="logo"
+     file="resources/common/logo.gif"
+     layer=".interfaces.ICommonSkinLayer"
+     />
 
   <!-- default favicon -->
-  <zojax:resource
-     name="favicon.gif"
-     file="resources/favicon.gif"
-     layer=".interfaces.ISkinLayer" />
+  <zojax:ttwresource
+     title="Header: Favicon - Data"
+     name="favicon"
+     file="resources/common/favicon.gif"
+     layer=".interfaces.ICommonSkinLayer" />
+   
+  <!-- css resources -->
+  <zojax:resourcedirectory
+     name="common"
+     directory="resources/common"
+     mapping=".css:zrt" 
+     layer=".interfaces.ICommonSkinLayer" />
+ 
+  <!-- custom styles -->
+  <zojax:resourcepackage
+     type="stylesheet"
+     name="common.css"
+     title="zojax Common (Stylesheets)"
+     cache="dynamic"
+     library="common"
+     require="zojax"
+     layer=".interfaces.ICommonSkinLayer">
+    <resource path="common/common.css" media="all" />
+  </zojax:resourcepackage>
 
   <!-- css resources -->
   <zojax:resourcedirectory
-     name="zojaxdefault"
+     name="theme"
      directory="resources"
      mapping=".css:zrt" 
      layer=".interfaces.ISkinLayer" />
 
   <zojax:resourcepackage
      type="stylesheet"
-     name="zojaxdefault.css"
+     name="theme.css"
      title="zojax default theme (Stylesheets)"
      cache="dynamic"
-     library="zojaxdefault"
+     library="theme"
      order="10"
-     require="zojax"
+     require="common"
      layer=".interfaces.ISkinLayer">
 
-    <resource path="zojaxdefault/base.css" media="all" />
-    <resource path="zojaxdefault/portal.css" media="all" />
-    <resource path="zojaxdefault/print.css" media="print" />
-  </zojax:resourcepackage>
- 
-  <!-- custom styles -->
-  <zojax:resourcepackage
-     type="stylesheet"
-     name="zojax-custom.css"
-     title="zojax Custom (Stylesheets)"
-     cache="dynamic"
-     library="zojax-custom"
-     require="zojax"
-     layer=".interfaces.ISkinLayer">
-    <resource path="zojaxdefault/custom.css" media="all" />
+    <resource path="theme/base.css" media="all" />
+    <resource path="theme/portal.css" media="all" />
+    <resource path="theme/print.css" media="print" />
   </zojax:resourcepackage>
 
 </configure>
