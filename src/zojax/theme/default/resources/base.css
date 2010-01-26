@@ -179,7 +179,7 @@ textarea {
   font-family: monospaceFontFamily;
   border: borderWidth solid globalBorderColor;
   color: inputFontColor;
-  background: White url(zojaxdefault/input_background.gif) repeat-x;
+  background: White url(theme/input_background.gif) repeat-x;
   width: 80%;
 }
 
@@ -190,7 +190,7 @@ input {
   border: borderWidth solid globalBorderColor;
   color: inputFontColor;
   vertical-align: middle;
-  background: white url(zojaxdefault/input_background.gif) repeat-x;
+  background: white url(theme/input_background.gif) repeat-x;
 }
 
 select {
