@@ -93,7 +93,8 @@
   <!-- default favicon -->
   <zojax:ttwresource
      title="Header: Favicon - Data"
-     name="favicon"
+     name="favicon.ico"
+     type="image/x-icon"
      file="resources/common/favicon.gif"
      layer=".interfaces.ICommonSkinLayer" />
    
