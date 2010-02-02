@@ -26,7 +26,6 @@
      uid="zojax.page"
      for="zope.app.component.interfaces.ISite"
      description="Page layout. It contains html headers, html body, etc."
-     template="layoutpage.pt"
      class=".layoutpage.LayoutPage"
      layer=".interfaces.ICommonSkinLayer" />
 
@@ -36,9 +35,9 @@
      title="Portal"
      layout="page"
      uid="zojax.portal"
+     template="layoutportal.pt"
      for="zope.app.component.interfaces.ISite"
      description="Portal layout for 'zojax'"
-     template="layoutportal.pt"
      layer=".interfaces.ICommonSkinLayer" />
 
   <!-- viewspace layout -->

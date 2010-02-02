@@ -18,6 +18,8 @@ $Id$
 from zope.component import getMultiAdapter
 from zope.traversing.browser import absoluteURL
 from zope.app.component.hooks import getSite
+
+from zojax.layout.layout import LayoutTemplateFile
 from zojax.content.type.interfaces import IContentType
 from zojax.content.space.interfaces import IWorkspace
 
@@ -26,6 +28,8 @@ class LayoutPage(object):
 
     contentId = None
     contentClass = None
+    
+    template = LayoutTemplateFile('layoutpage.pt')
 
     def update(self):
         context = self.context
