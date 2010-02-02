@@ -1,6 +1,6 @@
 <div i18n:domain="zope">
   <ul>
-    <li tal:repeat="part context" tal:content="part"
+    <li tal:repeat="part view/exception" tal:content="part"
         i18n:translate="">Error message</li>
   </ul>
 </div>
