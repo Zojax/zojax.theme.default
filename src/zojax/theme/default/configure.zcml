@@ -85,7 +85,7 @@
   <zojax:ttwresource
      title="Header: Logo - Data"
      name="logo"
-     file="resources/common/logo.gif"
+     file="resources/common/logo.png"
      layer=".interfaces.ICommonSkinLayer"
      />
 
