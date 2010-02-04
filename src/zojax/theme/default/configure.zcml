@@ -94,7 +94,7 @@
      title="Header: Favicon - Data"
      name="favicon.ico"
      type="image/x-icon"
-     file="resources/common/favicon.gif"
+     file="resources/common/favicon.ico"
      layer=".interfaces.ICommonSkinLayer" />
    
   <!-- css resources -->
