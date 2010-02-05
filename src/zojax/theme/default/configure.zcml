@@ -72,14 +72,6 @@
      template="portaltabs.pt"
      class=".portaltabs.PortalTabs"
      layer=".interfaces.ICommonSkinLayer" />
-
-  <!-- root space layout -->
-  <zojax:layout
-     name="space"
-     layout="portal"
-     for="zojax.content.space.interfaces.IRootSpace"
-     template="spacelayout.pt"
-     layer=".interfaces.ICommonSkinLayer" />
    
   <!-- default logo -->
   <zojax:ttwresource
