@@ -1,3 +1,0 @@
-<div id="z-space" class="z-portal-space">
-  <tal:block content="structure view/render" />
-</div>
