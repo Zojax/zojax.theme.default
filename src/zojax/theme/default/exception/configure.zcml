@@ -2,13 +2,13 @@
    xmlns="http://namespaces.zope.org/zope"
    xmlns:zojax="http://namespaces.zope.org/zojax">
 
-  <!--browser:page
+  <zojax:pagelet
      for="zope.interface.common.interfaces.IException"
      name="index.html"
      template="systemerror.pt"
-     class="zojax.layout.pagelet.BrowserPagelet"
      permission="zope.Public"
-     layer="zojax.theme.default.interfaces.ISkinLayer" /-->
+     layer="..interfaces.ICommonSkinLayer"
+     layout="portal" />
 
   <zojax:pagelet
      name="index.html"
