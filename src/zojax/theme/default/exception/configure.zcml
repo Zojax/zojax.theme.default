@@ -8,6 +8,7 @@
      template="systemerror.pt"
      permission="zope.Public"
      layer="..interfaces.ICommonSkinLayer"
+     class="zope.app.exception.systemerror.SystemErrorView"
      layout="portal" />
 
   <zojax:pagelet
