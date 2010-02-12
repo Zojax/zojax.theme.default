@@ -50,6 +50,14 @@
      for="zope.app.component.interfaces.ISite"
      template="layoutviewspace.pt" 
      layer=".interfaces.ICommonSkinLayer" />
+     
+  <!-- root space layout -->
+  <zojax:layout
+     name="space"
+     layout="portal"
+     for="zojax.content.space.interfaces.IRootSpace"
+     template="spacelayout.pt"
+     layer=".interfaces.ISkinLayer" />
 
   <!-- html header elements -->
   <zojax:pageelement
