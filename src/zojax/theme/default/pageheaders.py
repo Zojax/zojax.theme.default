@@ -21,6 +21,7 @@ from zojax.cache.keys import ContextModified, Principal
 
 class PageHeaders(object):
 
-    @cache('skin.default.pageheaders', ContextModified, Principal)
+    #can't cache that
+    #@cache('skin.default.pageheaders', ContextModified, Principal)
     def updateAndRender(self):
         return super(PageHeaders, self).updateAndRender()
