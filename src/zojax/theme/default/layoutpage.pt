@@ -12,8 +12,9 @@
                tal:content="structure pageelement:page.headers" />
   </head>
 
-  <body tal:content="structure view/render"
-        tal:attributes="id layout/contentId; class layout/contentClass">
-    $(rendered)s
+  <body tal:attributes="id layout/contentId; class layout/contentClass">
+    <tal:block tal:define="view nocall:mainview; context nocall:maincontext"
+               tal:content="structure pageelement:page.bodyheaders" />
+    <tal:block tal:content="structure view/render" />
   </body>
 </html>

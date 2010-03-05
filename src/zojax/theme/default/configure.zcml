@@ -66,6 +66,13 @@
      template="pageheaders.pt"
      layer=".interfaces.ICommonSkinLayer"
      class=".pageheaders.PageHeaders" />
+     
+  <!-- html body header elements -->
+  <zojax:pageelement
+     name="page.bodyheaders"
+     provides=".interfaces.IPageBodyHeaders"
+     layer=".interfaces.ICommonSkinLayer" />
+  
 
   <!-- portal elements -->
   <zojax:pageelement

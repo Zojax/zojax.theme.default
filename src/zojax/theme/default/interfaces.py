@@ -45,3 +45,7 @@ class IPortalFooter(IPageElement):
 # viewlet managers
 class IPageHeaders(IPageElement, IGoogleAnalyticsHeaders):
     """ page headers """
+
+# viewlet managers
+class IPageBodyHeaders(IPageElement):
+    """ page body headers """

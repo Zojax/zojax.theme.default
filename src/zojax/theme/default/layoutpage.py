@@ -35,10 +35,13 @@ class LayoutPage(object):
         context = self.context
         request = self.request
 
-        self.url = '%s/'%request.URL
-        self.base_url = '%s/'%request.URL[-1]
+        self.url = '%s/'%request.getURL()
         self.portal_url = '%s/'%absoluteURL(getSite(), request)
-
+        try:
+            self.base_url = '%s/'%request.URL[-1]
+        except KeyError:
+            self.base_url = self.portal_url
+        
         # body id
         ws = self.maincontext
         while not IWorkspace.providedBy(ws):
