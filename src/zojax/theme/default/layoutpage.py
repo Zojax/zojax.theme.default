@@ -15,6 +15,7 @@
 
 $Id$
 """
+import os.path
 from zope.component import getMultiAdapter
 from zope.traversing.browser import absoluteURL
 from zope.app.component.hooks import getSite
