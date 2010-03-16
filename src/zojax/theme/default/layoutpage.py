@@ -27,8 +27,8 @@ from zojax.layout.pagelet import BrowserPagelet
 
 class LayoutPage(object):
 
-    contentId = None
-    contentClass = None
+    contentId = ''
+    contentClass = ''
     
     template = LayoutTemplateFile('layoutpage.pt')
 
