@@ -22,6 +22,7 @@ from zope.app.component.hooks import getSite
 from zojax.layout.layout import LayoutTemplateFile
 from zojax.content.type.interfaces import IContentType
 from zojax.content.space.interfaces import IWorkspace
+from zojax.layout.pagelet import BrowserPagelet
 
 
 class LayoutPage(object):
@@ -56,3 +57,10 @@ class LayoutPage(object):
         ct = IContentType(self.maincontext, None)
         if ct is not None:
             self.contentClass = 'section-%s'%ct.name.replace('.', '-')
+
+        viewclass = self.mainview.__class__.__bases__[0]
+        if not viewclass is BrowserPagelet:
+            self.contentClass += ' %s.%s'%(viewclass.__module__, viewclass.__name__)
+        if self.mainview.template:
+            self.contentClass += ' %s'%(os.path.split(self.mainview.template.filename)[1])
+        self.contentClass = self.contentClass.replace('.', '-').lower()
