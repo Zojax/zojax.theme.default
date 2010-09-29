@@ -1,7 +1,40 @@
-<div i18n:domain="zope"
-     tal:define="ignored python:request.response.setStatus(500)">
-  <h3 i18n:translate="">System Error</h3>
-  <div>
-    A system error occurred.
-  </div>
-</div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      tal:define="language request/locale/getLocaleID; dummy resourcepackage:common">
+  <head tal:define="dummy resourcepackage:theme">
+    <base tal:attributes="href request/URL" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <tal:block content="structure python:modules['zojax.resourcepackage'].library.renderResourceLinks(request)" ></tal:block>
+  </head>
+
+  <body>
+    <div id="visual-portal-wrapper-external2">
+    <div id="visual-portal-wrapper-external" tal:define="context modules/zope.app.component.hooks/getSite">
+    <div id="visual-portal-wrapper">
+
+      <tal:block content="structure pageelement:portal.header" />
+
+      <tal:block tal:content="structure pageelement:portal.breadcrumbs" />
+
+      <div class="z-portal-statusmessage"
+           tal:define="msg provider:statusMessage"
+           tal:condition="msg" tal:content="structure msg"></div>
+
+          <div i18n:domain="zope"
+             tal:define="ignored python:request.response.setStatus(500)">
+              <h3 i18n:translate="">System Error</h3>
+              <div>
+                A system error occurred.
+              </div>
+            </div>
+
+
+      <div class="visualClear"><!-- --></div>
+
+      <tal:block content="structure pageelement:portal.footer" />
+
+    </div>
+    </div>
+    </div>
+  </body>
+</html>

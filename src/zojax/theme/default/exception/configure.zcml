@@ -1,15 +1,16 @@
 <configure
    xmlns="http://namespaces.zope.org/zope"
+   xmlns:browser="http://namespaces.zope.org/browser"
    xmlns:zojax="http://namespaces.zope.org/zojax">
 
-  <zojax:pagelet
+  <browser:page
      for="zope.interface.common.interfaces.IException"
      name="index.html"
      template="systemerror.pt"
      permission="zope.Public"
      layer="..interfaces.ICommonSkinLayer"
      class="zope.app.exception.systemerror.SystemErrorView"
-     layout="portal" />
+     />
 
   <zojax:pagelet
      name="index.html"
