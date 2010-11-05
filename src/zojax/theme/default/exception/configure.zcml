@@ -3,11 +3,10 @@
    xmlns:zojax="http://namespaces.zope.org/zojax"
    xmlns:browser="http://namespaces.zope.org/browser">
 
-  <browser:page
+  <zojax:pagelet
      for="zope.interface.common.interfaces.IException"
      name="index.html"
      template="systemerror.pt"
-     class="zope.app.exception.systemerror.SystemErrorView"
      permission="zope.Public"
      layer="..interfaces.ICommonSkinLayer" />
 
