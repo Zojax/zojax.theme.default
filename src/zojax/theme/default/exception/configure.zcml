@@ -8,7 +8,8 @@
      name="index.html"
      template="systemerror.pt"
      permission="zope.Public"
-     layer="..interfaces.ICommonSkinLayer" />
+     layer="..interfaces.ICommonSkinLayer"
+     layout="portal" />
 
   <zojax:pagelet
      name="index.html"
