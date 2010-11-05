@@ -8,33 +8,13 @@
   </head>
 
   <body>
-    <div id="visual-portal-wrapper-external2">
-    <div id="visual-portal-wrapper-external" tal:define="context modules/zope.app.component.hooks/getSite">
-    <div id="visual-portal-wrapper">
+       <div i18n:domain="zope"
+         tal:define="ignored python:request.response.setStatus(500)">
+          <h3 i18n:translate="">System Error</h3>
+          <div>
+            A system error occurred.
+          </div>
+        </div>
 
-      <tal:block content="structure pageelement:portal.header" />
-
-      <tal:block tal:content="structure pageelement:portal.breadcrumbs" />
-
-      <div class="z-portal-statusmessage"
-           tal:define="msg provider:statusMessage"
-           tal:condition="msg" tal:content="structure msg"></div>
-
-          <div i18n:domain="zope"
-             tal:define="ignored python:request.response.setStatus(500)">
-              <h3 i18n:translate="">System Error</h3>
-              <div>
-                A system error occurred.
-              </div>
-            </div>
-
-
-      <div class="visualClear"><!-- --></div>
-
-      <tal:block content="structure pageelement:portal.footer" />
-
-    </div>
-    </div>
-    </div>
   </body>
 </html>

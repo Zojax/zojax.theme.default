@@ -1,6 +1,18 @@
-<div i18n:domain="zope">
-  <ul>
-    <li tal:repeat="part view/exception" tal:content="part"
-        i18n:translate="">Error message</li>
-  </ul>
-</div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      tal:define="language request/locale/getLocaleID; dummy resourcepackage:common">
+  <head tal:define="dummy resourcepackage:theme">
+    <base tal:attributes="href request/URL" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <tal:block content="structure python:modules['zojax.resourcepackage'].library.renderResourceLinks(request)" ></tal:block>
+  </head>
+
+  <body>
+       <div i18n:domain="zope">
+        <ul>
+          <li tal:repeat="part view/exception" tal:content="part"
+              i18n:translate="">Error message</li>
+        </ul>
+      </div>
+  </body>
+</html>
