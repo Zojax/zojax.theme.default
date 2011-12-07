@@ -8,10 +8,10 @@
   </head>
 
   <body>
-       <div i18n:domain="zope"
+       <div i18n:domain="zojax.theme.default"
          tal:define="ignored python:request.response.setStatus(500)">
           <h3 i18n:translate="">System Error</h3>
-          <div>
+          <div i18n:translate="">
             A system error occurred.
           </div>
         </div>

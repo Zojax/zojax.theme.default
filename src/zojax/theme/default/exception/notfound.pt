@@ -8,7 +8,7 @@
   </head>
 
   <body>
-       <div i18n:domain="zope">
+       <div i18n:domain="zojax.theme.default">
           <h3 i18n:translate="">
             The page that you are trying to access is not available
           </h3>
