@@ -10,8 +10,7 @@
   <body>
        <div i18n:domain="zojax.theme.default">
         <ul>
-          <li tal:repeat="part view/exception" tal:content="part"
-              i18n:translate="">Error message</li>
+          <li tal:repeat="part view/exception" tal:content="part">Error message</li>
         </ul>
       </div>
   </body>
