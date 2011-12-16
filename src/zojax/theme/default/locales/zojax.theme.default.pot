@@ -1,0 +1,65 @@
+##############################################################################
+#
+# Copyright (c) 2003-2004 Zope Corporation and Contributors.
+# All Rights Reserved.
+#
+# This software is subject to the provisions of the Zope Public License,
+# Version 2.1 (ZPL).  A copy of the ZPL should accompany this distribution.
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY AND ALL EXPRESS OR IMPLIED
+# WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+# WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
+# FOR A PARTICULAR PURPOSE.
+#
+##############################################################################
+msgid ""
+msgstr ""
+"Project-Id-Version: Development/Unknown\n"
+"POT-Creation-Date: Sun Dec 11 11:26:06 2011\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Zope 3 Developers <zope3-dev@zope.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: zope/app/locales/extract.py\n"
+
+#: src/zojax/theme/default/configure.zcml:100
+msgid "Header: Favicon - Data"
+msgstr ""
+
+#: src/zojax/theme/default/configure.zcml:92
+msgid "Header: Logo - Data"
+msgstr ""
+
+#: src/zojax/theme/default/exception/notfound.pt:12
+msgid "The page that you are trying to access is not available"
+msgstr ""
+
+#: src/zojax/theme/default/exception/notfound.pt:16
+msgid "Please note the following:"
+msgstr ""
+
+#: src/zojax/theme/default/exception/notfound.pt:19
+msgid "You might have misspelled the url"
+msgstr ""
+
+#: src/zojax/theme/default/exception/notfound.pt:20
+msgid "You might be trying to access a non-existing page"
+msgstr ""
+
+#: src/zojax/theme/default/exception/systemerror.pt:13
+msgid "System Error"
+msgstr ""
+
+#: src/zojax/theme/default/exception/systemerror.pt:14
+msgid "A system error occurred."
+msgstr ""
+
+#: src/zojax/theme/default/exception/unauthorized.pt:2
+msgid "Unauthorized"
+msgstr ""
+
+#: src/zojax/theme/default/exception/unauthorized.pt:4
+msgid "You are not authorized"
+msgstr ""
+
